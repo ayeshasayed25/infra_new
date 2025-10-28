@@ -1,0 +1,30 @@
+- hosts: all
+  become: yes
+  tasks:
+    - name: Update apt packages
+      apt:
+        update_cache: yes
+
+    - name: Install Docker
+      apt:
+        name: docker.io
+        state: present
+
+    - name: Install Python pip
+      apt:
+        name: python3-pip
+        state: present
+
+    - name: Install Ansible via apt
+        become: yes
+        apt:
+        name: ansible
+        state: present
+        update_cache: yes
+
+
+    - name: Install kubectl
+      shell: |
+        curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+        chmod +x kubectl
+        mv kubectl /usr/local/bin/
