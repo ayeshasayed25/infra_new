@@ -1,0 +1,73 @@
+# ----------------------
+# Python / Ansible
+# ----------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.swp
+*.swo
+*.log
+
+# Ansible vault files (optional)
+*.vault
+*.retry
+
+# ----------------------
+# Docker
+# ----------------------
+# Ignore Docker environment files
+*.env
+docker-compose.override.yml
+
+# Docker temporary files
+*.tmp
+
+# Node modules / build artifacts (if applicable)
+**/node_modules/
+**/vendor/
+**/dist/
+
+# ----------------------
+# Jenkins
+# ----------------------
+# Ignore Jenkins logs and workspace
+jenkins_home/workspace/
+jenkins_home/jobs/*/builds/
+*.log
+
+# ----------------------
+# Terraform
+# ----------------------
+# Ignore Terraform state files and plan outputs
+*.tfstate
+*.tfstate.backup
+*.tfplan
+*.terraform/
+*.lock.hcl
+
+# Crash logs
+crash.log
+
+# ----------------------
+# IDEs / Editors
+# ----------------------
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# ----------------------
+# OS Files
+# ----------------------
+.DS_Store
+Thumbs.db
+
+# ----------------------
+# Misc / backups
+# ----------------------
+*.bak
+*.old
+*.swp
+
+*.pem

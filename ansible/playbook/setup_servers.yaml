@@ -16,8 +16,8 @@
         state: present
 
     - name: Install Ansible via apt
-        become: yes
-        apt:
+      become: yes
+      apt:
         name: ansible
         state: present
         update_cache: yes
